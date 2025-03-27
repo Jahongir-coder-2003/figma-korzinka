@@ -1,0 +1,745 @@
+@use "../utils/variables" as var;
+@use "../layout/header";
+@use "../layout/footer";
+
+body {
+  background-color: var.$bg-all;
+}
+.page1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 72px;
+  width: 100%;
+  height: 200px;
+  background-color: var.$white;
+  background-image: url(../../images/page1-bg.png);
+  img {
+    width: 100%;
+  }
+}
+
+.page2 {
+  margin-top: 80px;
+  .page2-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h2 {
+      font-weight: 700;
+
+      color: var.$black;
+    }
+    a {
+      color: var.$darkGrey;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+  .page2-cards {
+    justify-content: center;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .page2-card {
+    img {
+      width: 100%;
+    }
+    padding: 8px;
+    width: 272px;
+    border-radius: 4px;
+    background-color: var.$white;
+    transition: 0.5s;
+    .page2-card-img {
+      img {
+        height: 160px;
+      }
+    }
+    .page2-card-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h3 {
+        color: var.$black;
+        font-weight: 700;
+        font-size: 18px;
+      }
+      h4 {
+        color: var.$darkGrey;
+        font-weight: 400;
+        font-size: 16px;
+      }
+    }
+    .page2-card-info {
+      display: flex;
+      justify-content: space-between;
+      p {
+        color: var.$grey;
+        font-weight: 400;
+        font-size: 12px;
+      }
+    }
+    h5 {
+      margin-top: 8px;
+      color: var.$black;
+      font-weight: 400;
+    }
+    button {
+      margin-top: 8px;
+      width: 100%;
+      height: 40px;
+      border: 1px solid var.$green;
+      background-color: var.$white;
+      color: var.$green;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      border-radius: 4px;
+      transition: 0.5s;
+      &:hover {
+        border: 1px solid var.$orange;
+        background-color: var.$orange;
+        color: var.$white;
+      }
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.page3 {
+  margin-top: 120px;
+  .page3-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h2 {
+      font-weight: 700;
+
+      color: var.$black;
+    }
+    a {
+      color: var.$darkGrey;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+  .page3-cards {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .page3-card {
+    padding: 8px;
+    width: 272px;
+    background-color: var.$white;
+    transition: 0.5s;
+    .page3-card-img {
+      img {
+        width: 100%;
+        height: 160px;
+      }
+    }
+    h3 {
+      margin-top: 8px;
+      color: var.$black;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    h2 {
+      margin-top: 53px;
+      margin-bottom: 8px;
+      font-weight: 400;
+      font-size: 16px;
+      color: var.$black;
+    }
+    button {
+      margin-top: 8px;
+      width: 100%;
+      height: 40px;
+      border: 1px solid var.$green;
+      background-color: var.$white;
+      color: var.$green;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      border-radius: 4px;
+      transition: 0.5s;
+      &:hover {
+        border: 1px solid var.$orange;
+        background-color: var.$orange;
+        color: var.$white;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.page4 {
+  margin-top: 120px;
+  .page4-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h2 {
+      font-weight: 700;
+
+      color: var.$black;
+    }
+    a {
+      color: var.$darkGrey;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+
+  .page4-cards {
+    margin-top: 40px;
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    .page4-card {
+      padding: 8px;
+
+      background-color: var.$white;
+      transition: 0.5s;
+      &:hover {
+        transform: scale(1.1);
+      }
+      .page4-card-img {
+        img {
+          width: 100%;
+          height: 160px;
+        }
+      }
+      h3 {
+        margin-top: 8px;
+        color: var.$black;
+        font-weight: 700;
+      }
+      h2 {
+        margin-bottom: 8px;
+        font-weight: 400;
+
+        color: var.$black;
+      }
+      button {
+        margin-top: 8px;
+        width: 100%;
+        height: 40px;
+        border: 1px solid var.$green;
+        background-color: var.$white;
+        color: var.$green;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        border-radius: 4px;
+        transition: 0.5s;
+        &:hover {
+          border: 1px solid var.$orange;
+          background-color: var.$orange;
+          color: var.$white;
+        }
+      }
+    }
+  }
+}
+
+.page5 {
+  margin-top: 120px;
+  .page5-header {
+    h2 {
+      color: var.$black;
+      font-weight: 700;
+    }
+  }
+  .page5-cards {
+    margin-top: 40px;
+    display: flex;
+
+    justify-content: space-between;
+    .page5-card {
+      max-width: 584px;
+      height: 200px;
+      border-radius: 4px;
+      background-color: var.$page5-card-bg;
+      display: flex;
+      align-items: center;
+
+      justify-content: space-between;
+
+      transition: 0.5s;
+      &:hover {
+        transform: scale(1.1);
+      }
+      .page5-card-info {
+        max-width: 258px;
+        h2 {
+          color: var.$black;
+          font-weight: 700;
+        }
+        p {
+          margin-top: 6px;
+          color: var.$black;
+          font-weight: 400;
+        }
+      }
+    }
+    .card2 {
+      background-color: var.$page5-card2-bg;
+    }
+  }
+}
+
+.page7 {
+  margin-top: 120px;
+  .page7-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    h2 {
+      font-weight: 700;
+      color: var.$black;
+    }
+    a {
+      color: var.$darkGrey;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+  .page7-cards {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    .page7-card {
+      background-color: var.$white;
+      transition: 0.5s;
+      &:hover {
+        transform: scale(1.1);
+      }
+      .page7-card-img {
+        img {
+          width: 100%;
+          height: 165px;
+        }
+      }
+
+      .page7-card-info {
+        padding: 10px;
+        button {
+          margin-top: 10px;
+          width: 150px;
+          height: 40px;
+          background-color: var.$page7-btn;
+          color: var.$green;
+          border-radius: 4px;
+          border: none;
+          transition: 0.5s;
+          &:hover {
+            background-color: var.$green;
+            color: var.$page7-btn;
+          }
+        }
+        p {
+          color: var.$page7-p;
+          font-weight: 400;
+          font-size: 12px;
+        }
+        h2 {
+          margin-top: 10px;
+          color: var.$black;
+          font-weight: 700;
+          font-size: 18px;
+        }
+        h3 {
+          margin-top: 10px;
+          color: var.$black;
+          font-weight: 400;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+.button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #70c05b;
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+ position: fixed;
+ right: 30px;
+ bottom: 30px;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.button:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: #70c05b;
+  align-items: center;
+}
+
+.button:hover .svgIcon {
+  /* width: 20px; */
+  transition-duration: 0.3s;
+  transform: translateY(-200%);
+}
+
+.button::before {
+  position: absolute;
+  bottom: -20px;
+  content: "Back to Top";
+  color: white;
+  /* transition-duration: .3s; */
+  font-size: 0px;
+}
+
+.button:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  bottom: unset;
+  /* transform: translateY(-30px); */
+  transition-duration: 0.3s;
+}
+
+@media (min-width: 360px) {
+  .page2 {
+    .page2-header {
+      h2 {
+        font-size: 24px;
+      }
+    }
+    .page2-cards {
+      gap: 16px;
+      .page2-card {
+        width: 160px;
+        .page2-card-title {
+          h3 {
+            font-size: 14px;
+          }
+          h4 {
+            font-size: 12px;
+          }
+        }
+        .page2-card-info {
+          display: flex;
+          justify-content: space-between;
+          p {
+            color: var.$grey;
+            font-weight: 400;
+            font-size: 8px;
+          }
+          h5 {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  .page3 {
+    .page3-header {
+      h2 {
+        font-size: 24px;
+      }
+    }
+    .page3-cards {
+      gap: 16px;
+      .page3-card {
+        width: 160px;
+
+        h3 {
+          font-size: 14px;
+        }
+        h2 {
+          margin-top: 20px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .page4 {
+    .page4-header {
+      h2 {
+        font-size: 24px;
+      }
+    }
+    .page4-cards {
+      gap: 16px;
+      .page4-card {
+        width: 160px;
+
+        h3 {
+          font-size: 14px;
+        }
+        h2 {
+          margin-top: 20px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .page5 {
+    .page5-header {
+      h2 {
+        font-size: 24px;
+      }
+    }
+    .page5-cards {
+      flex-direction: column;
+    }
+    .page5-card {
+      img {
+        width: 165px;
+      }
+      padding: 10px;
+      margin-top: 16px;
+
+      h2 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .page7 {
+    .page7-header {
+      h2 {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .page2 {
+    .page2-cards {
+      gap: 32px;
+      .page2-card {
+        width: 224px;
+        .page2-card-title {
+          h3 {
+            font-size: 18px;
+          }
+          h4 {
+            font-size: 16px;
+          }
+        }
+        .page2-card-info {
+          p {
+            font-size: 12px;
+          }
+          h5 {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+  .page3 {
+    .page3-cards {
+      gap: 32px;
+      .page3-card {
+        width: 224px;
+
+        h3 {
+          font-size: 18px;
+        }
+        h2 {
+          margin-top: 20px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .page4 {
+    .page4-cards {
+      gap: 32px;
+      .page4-card {
+        width: 224px;
+
+        h3 {
+          font-size: 18px;
+        }
+        h2 {
+          margin-top: 20px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .page5 {
+    .page5-cards {
+      flex-direction: row;
+      .page5-card {
+        img {
+          width: 165px;
+        }
+        padding: 20px;
+
+        h2 {
+          font-size: 18px;
+        }
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .page7 {
+    .page7-cards {
+      gap: 32px;
+      .page7-card {
+        width: 224px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .page1 {
+    display: flex;
+  }
+  .page2 {
+    .page2-header {
+      h2 {
+        font-size: 36px;
+      }
+    }
+    .page2-cards {
+      gap: 40px;
+      .page2-card {
+        width: 272px;
+        .page2-card-title {
+          h3 {
+            font-size: 18px;
+          }
+          h4 {
+            font-size: 16px;
+          }
+        }
+        .page2-card-info {
+          p {
+            font-size: 12px;
+          }
+          h5 {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+  .page3 {
+    .page3-header {
+      h2 {
+        font-size: 36px;
+      }
+    }
+    .page3-cards {
+      gap: 40px;
+      .page3-card {
+        width: 272px;
+
+        h3 {
+          font-size: 18px;
+        }
+        h2 {
+          margin-top: 20px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .page4 {
+    .page4-header {
+      h2 {
+        font-size: 36px;
+      }
+    }
+    .page4-cards {
+      gap: 40px;
+      .page4-card {
+        width: 272px;
+
+        h3 {
+          font-size: 18px;
+        }
+        h2 {
+          margin-top: 20px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .page5 {
+    .page5-header {
+      h2 {
+        font-size: 36px;
+      }
+    }
+    .page5-cards {
+      flex-direction: row;
+    }
+    .page5-card {
+      img {
+        width: 193px;
+      }
+      padding: 30px;
+
+      h2 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+  .page7 {
+    .page7-header {
+      h2 {
+        font-size: 36px;
+      }
+    }
+    .page7-cards {
+      gap: 40px;
+      .page7-card {
+        width: 376px;
+      }
+    }
+  }
+}
