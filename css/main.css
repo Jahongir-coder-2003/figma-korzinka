@@ -105,7 +105,7 @@ header nav .nav-profile .nav-icons .nav-icon p {
   font-size: 12px;
 }
 
-@media (min-width: 360px) {
+@media (min-width: 320px) {
   .nav-input input {
     width: 170px;
   }
