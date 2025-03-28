@@ -55,7 +55,7 @@ body {
     .page2-card-img {
       .heart-container {
         position: absolute;
-z-index: 1;
+        z-index: 1;
         width: 24px;
         right: 8px;
       }
@@ -534,6 +534,30 @@ z-index: 1;
   }
 }
 
+@media (min-width: 320px) {
+  .page2-card {
+    margin-top: 40px;
+  }
+  .page3-card {
+    margin-top: 40px;
+  }
+  .page4-card {
+    margin-top: 40px;
+  }
+  .page5-cards {
+    display: flex;
+    flex-direction: column;
+    .page5-card {
+      text-align: center;
+      padding-top: 40px;
+      flex-wrap: wrap;
+      margin-top: 60px;
+      img {
+        display: none;
+      }
+    }
+  }
+}
 @media (min-width: 360px) {
   .page2 {
     .page2-header {
@@ -620,8 +644,13 @@ z-index: 1;
       flex-direction: column;
     }
     .page5-card {
+      text-align: start;
+.page5-card-info{
+  width: 100px;
+}
       img {
         width: 165px;
+        display: flex;
       }
       padding: 10px;
       margin-top: 16px;
@@ -705,8 +734,9 @@ z-index: 1;
     .page5-cards {
       flex-direction: row;
       .page5-card {
+        width: 352;
         img {
-          width: 165px;
+          width: 193px;
         }
         padding: 20px;
 
@@ -814,6 +844,7 @@ z-index: 1;
       flex-direction: row;
     }
     .page5-card {
+      width: 584px;
       img {
         width: 193px;
       }

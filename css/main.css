@@ -109,6 +109,28 @@ header nav .nav-profile .nav-icons .nav-icon p {
 
 @media (min-width: 320px) {
   .nav-input input {
+    width: 100px;
+  }
+  .nav-profile {
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+    left: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .nav-profile .nav-icons {
+    gap: 60px;
+  }
+  .nav-profile .nav-profile-img {
+    display: none;
+  }
+  .nav_search {
+    display: none;
+  }
+}
+@media (min-width: 360px) {
+  .nav-input input {
     width: 170px;
   }
   .nav-profile {
@@ -730,6 +752,30 @@ body {
     display: none;
   }
 }
+@media (min-width: 320px) {
+  .page2-card {
+    margin-top: 40px;
+  }
+  .page3-card {
+    margin-top: 40px;
+  }
+  .page4-card {
+    margin-top: 40px;
+  }
+  .page5-cards {
+    display: flex;
+    flex-direction: column;
+  }
+  .page5-cards .page5-card {
+    text-align: center;
+    padding-top: 40px;
+    flex-wrap: wrap;
+    margin-top: 60px;
+  }
+  .page5-cards .page5-card img {
+    display: none;
+  }
+}
 @media (min-width: 360px) {
   .page2 .page2-header h2 {
     font-size: 24px;
@@ -797,11 +843,16 @@ body {
     flex-direction: column;
   }
   .page5 .page5-card {
+    text-align: start;
     padding: 10px;
     margin-top: 16px;
   }
+  .page5 .page5-card .page5-card-info {
+    width: 100px;
+  }
   .page5 .page5-card img {
     width: 165px;
+    display: flex;
   }
   .page5 .page5-card h2 {
     font-size: 18px;
@@ -862,10 +913,11 @@ body {
     flex-direction: row;
   }
   .page5 .page5-cards .page5-card {
+    width: 352;
     padding: 20px;
   }
   .page5 .page5-cards .page5-card img {
-    width: 165px;
+    width: 193px;
   }
   .page5 .page5-cards .page5-card h2 {
     font-size: 18px;
@@ -944,6 +996,7 @@ body {
     flex-direction: row;
   }
   .page5 .page5-card {
+    width: 584px;
     padding: 30px;
   }
   .page5 .page5-card img {
