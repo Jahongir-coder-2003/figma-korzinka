@@ -88,9 +88,8 @@ header {
   }
 }
 
-
-@media(min-width:320px){
-   .nav-input {
+@media (min-width: 320px) {
+  .nav-input {
     input {
       width: 100px;
     }
@@ -112,7 +111,7 @@ header {
 
   .nav_search {
     display: none;
-  } 
+  }
 }
 @media (min-width: 360px) {
   .nav-input {

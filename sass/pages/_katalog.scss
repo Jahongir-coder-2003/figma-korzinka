@@ -1,0 +1,7 @@
+@use "../utils/variables" as var;
+@use "../layout/header";
+@use "../layout/footer";
+
+body {
+  background-color: var.$bg-all;
+}
