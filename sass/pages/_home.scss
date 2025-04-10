@@ -1,7 +1,7 @@
 @use "../utils/variables" as var;
 @use "../layout/header";
 @use "../layout/footer";
-
+@use "../base/reset";
 body {
   background-color: var.$bg-all;
 }
@@ -645,9 +645,9 @@ body {
     }
     .page5-card {
       text-align: start;
-.page5-card-info{
-  width: 100px;
-}
+      .page5-card-info {
+        width: 100px;
+      }
       img {
         width: 165px;
         display: flex;
