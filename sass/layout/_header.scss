@@ -114,9 +114,12 @@ header {
   }
 }
 @media (min-width: 360px) {
+  .nav-position {
+    gap: 10px;
+  }
   .nav-input {
     input {
-      width: 170px;
+      width: 10 0px;
     }
   }
   .nav-profile {
@@ -135,7 +138,8 @@ header {
   }
 
   .nav_search {
-    display: none;
+    display: flex;
+    max-width: 40px;
   }
 }
 
@@ -170,6 +174,7 @@ header {
     h3 {
       font-size: 12px;
     }
+
     padding: 8px;
     gap: 8px;
   }
@@ -190,6 +195,8 @@ header {
   }
 
   .nav_search {
+    max-width: 120px;
+
     img {
       width: 24px;
     }

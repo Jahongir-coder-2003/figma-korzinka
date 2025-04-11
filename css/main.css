@@ -130,8 +130,11 @@ header nav .nav-profile .nav-icons .nav-icon p {
   }
 }
 @media (min-width: 360px) {
+  .nav-position {
+    gap: 10px;
+  }
   .nav-input input {
-    width: 170px;
+    width: 10 0px;
   }
   .nav-profile {
     position: fixed;
@@ -148,7 +151,8 @@ header nav .nav-profile .nav-icons .nav-icon p {
     display: none;
   }
   .nav_search {
-    display: none;
+    display: flex;
+    max-width: 40px;
   }
 }
 @media (min-width: 768px) {
@@ -194,6 +198,7 @@ header nav .nav-profile .nav-icons .nav-icon p {
     display: flex;
   }
   .nav_search {
+    max-width: 120px;
     padding: 8px;
     gap: 8px;
   }
