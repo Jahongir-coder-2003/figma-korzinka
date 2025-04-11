@@ -6,7 +6,32 @@
 body {
   background-color: var.$bg-all;
 }
+.container {
+  h1 {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 150%;
+    letter-spacing: 0%;
+  }
+}
+.katalog-cards {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(4, 1fr);
 
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+}
 .katalog-kard {
   margin-top: 150px;
 
@@ -100,7 +125,7 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-    .food-card10 {
+  .food-card10 {
     width: 100%;
     max-width: 272px;
     height: 200px;
@@ -110,7 +135,7 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-    .food-card11 {
+  .food-card11 {
     width: 100%;
     max-width: 584px;
     height: 200px;
@@ -120,7 +145,7 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-    .food-card12 {
+  .food-card12 {
     width: 100%;
     max-width: 272px;
     height: 200px;
@@ -171,11 +196,11 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   }
-   .food-card11:hover {
+  .food-card11:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   }
-     .food-card12:hover {
+  .food-card12:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   }
@@ -230,11 +255,11 @@ body {
   .food-card10:hover .food-card__overlay {
     background: linear-gradient(180deg, rgba(255, 102, 51, 0) 0%, #ff6633 100%);
   }
-   .food-card11:hover .food-card__overlay {
+  .food-card11:hover .food-card__overlay {
     background: linear-gradient(180deg, rgba(255, 102, 51, 0) 0%, #ff6633 100%);
   }
 
-     .food-card12:hover .food-card__overlay {
+  .food-card12:hover .food-card__overlay {
     background: linear-gradient(180deg, rgba(255, 102, 51, 0) 0%, #ff6633 100%);
   }
   .food-card__title {
