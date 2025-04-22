@@ -96,3 +96,50 @@ function getCards5() {
 }
 getCards5();
 getCards5();
+
+//PAGE7
+
+let cards7 = document.querySelector(".page7-cards");
+console.log(cards7);
+
+function getCards7() {
+  let card7 = document.createElement("div");
+card7.className = "page7-card";
+cards7.append(card7);
+
+let cardImg7 = document.createElement("div");
+cardImg7.className = "page7-card-img";
+card7.append(cardImg7);
+
+let cardImg7img = document.createElement("img");
+cardImg7img.src = "./images/page7-card-img.png";
+cardImg7img.alt = "CARD IMG NO?";
+cardImg7.append(cardImg7img);
+
+let cardInfo7 = document.createElement("div");
+cardInfo7.className = "page7-card-info";
+card7.append(cardInfo7);
+
+let card7p = document.createElement("p");
+card7p.innerText = "05.03.2021";
+cardInfo7.append(card7p);
+
+let card7h2 = document.createElement("h2");
+card7h2.innerText = "Весеннее настроение для каждой";
+cardInfo7.append(card7h2);
+
+let card7h3 = document.createElement("h3");
+card7h3.innerText =
+  "  8 Марта – это не просто Международный женский день, это еще и день весеннего настроения, когда хочется дарить подарки и радовать себя и близких. Мы подготовили для вас специальные предложения на 8 Марта, которые помогут создать атмосферу праздника и сделать этот день незабываемым.";
+cardInfo7.append(card7h3);
+
+card7btn = document.createElement("button");
+card7btn.innerText = "ПОДРОБНЕЕ";
+cardInfo7.append(card7btn);
+}
+getCards7();
+getCards7();
+getCards7();
+
+
+
