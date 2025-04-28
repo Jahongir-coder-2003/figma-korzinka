@@ -364,19 +364,23 @@ body {
     justify-content: center;
     .page7-card {
       background-color: var.$white;
-      transition: 0.5s;
-      &:hover {
-        transform: scale(1.1);
-      }
+
       .page7-card-img {
+        overflow: hidden;
         img {
           width: 100%;
           height: 165px;
+          transition: 0.5s;
+
+          &:hover {
+            transform: scale(1.1);
+          }
         }
       }
 
       .page7-card-info {
         padding: 10px;
+
         button {
           margin-top: 10px;
           width: 150px;
@@ -386,22 +390,26 @@ body {
           border-radius: 4px;
           border: none;
           transition: 0.5s;
+
           &:hover {
             background-color: var.$green;
             color: var.$page7-btn;
           }
         }
+
         p {
           color: var.$page7-p;
           font-weight: 400;
           font-size: 12px;
         }
+
         h2 {
           margin-top: 10px;
           color: var.$black;
           font-weight: 700;
           font-size: 18px;
         }
+
         h3 {
           margin-top: 10px;
           color: var.$black;
@@ -410,127 +418,6 @@ body {
         }
       }
     }
-  }
-}
-
-/* From Uiverse.io by catraco */
-.heart-container {
-  --heart-color: rgb(255, 91, 137);
-  position: relative;
-  width: 24px;
-  height: 24px;
-  transition: 0.3s;
-}
-
-.heart-container .checkbox {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  z-index: 20;
-  cursor: pointer;
-}
-
-.heart-container .svg-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-}
-
-.heart-container .svg-outline,
-.heart-container .svg-filled {
-  fill: var(--heart-color);
-  position: absolute;
-}
-
-.heart-container .svg-filled {
-  animation: keyframes-svg-filled 1s;
-  display: none;
-}
-
-.heart-container .svg-celebrate {
-  position: absolute;
-  animation: keyframes-svg-celebrate 0.5s;
-  animation-fill-mode: forwards;
-  display: none;
-  stroke: var(--heart-color);
-  fill: var(--heart-color);
-  stroke-width: 2px;
-}
-
-.heart-container .checkbox:checked ~ .svg-container .svg-filled {
-  display: block;
-}
-
-.heart-container .checkbox:checked ~ .svg-container .svg-celebrate {
-  display: block;
-}
-/* From Uiverse.io by andrew-demchenk0 */
-.rating:not(:checked) > input {
-  position: absolute;
-  appearance: none;
-}
-
-.rating:not(:checked) > label {
-  float: right;
-  cursor: pointer;
-  font-size: 30px;
-  color: #666;
-}
-
-.rating:not(:checked) > label:before {
-  content: "★";
-}
-
-.rating > input:checked + label:hover,
-.rating > input:checked + label:hover ~ label,
-.rating > input:checked ~ label:hover,
-.rating > input:checked ~ label:hover ~ label,
-.rating > label:hover ~ input:checked ~ label {
-  color: #e58e09;
-}
-
-.rating:not(:checked) > label:hover,
-.rating:not(:checked) > label:hover ~ label {
-  color: #ff9e0b;
-}
-
-.rating > input:checked ~ label {
-  color: #ffa723;
-}
-
-@keyframes keyframes-svg-filled {
-  0% {
-    transform: scale(0);
-  }
-
-  25% {
-    transform: scale(1.2);
-  }
-
-  50% {
-    transform: scale(1);
-    filter: brightness(1.5);
-  }
-}
-
-@keyframes keyframes-svg-celebrate {
-  0% {
-    transform: scale(0);
-  }
-
-  50% {
-    opacity: 1;
-    filter: brightness(1.5);
-  }
-
-  100% {
-    transform: scale(1.4);
-    opacity: 0;
-    display: none;
   }
 }
 

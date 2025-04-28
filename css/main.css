@@ -596,14 +596,17 @@ body {
 }
 .page7 .page7-cards .page7-card {
   background-color: #ffffff;
-  transition: 0.5s;
 }
-.page7 .page7-cards .page7-card:hover {
-  transform: scale(1.1);
+.page7 .page7-cards .page7-card .page7-card-img {
+  overflow: hidden;
 }
 .page7 .page7-cards .page7-card .page7-card-img img {
   width: 100%;
   height: 165px;
+  transition: 0.5s;
+}
+.page7 .page7-cards .page7-card .page7-card-img img:hover {
+  transform: scale(1.1);
 }
 .page7 .page7-cards .page7-card .page7-card-info {
   padding: 10px;
@@ -640,123 +643,6 @@ body {
   font-size: 16px;
 }
 
-/* From Uiverse.io by catraco */
-.heart-container {
-  --heart-color: rgb(255, 91, 137);
-  position: relative;
-  width: 24px;
-  height: 24px;
-  transition: 0.3s;
-}
-
-.heart-container .checkbox {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  z-index: 20;
-  cursor: pointer;
-}
-
-.heart-container .svg-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.heart-container .svg-outline,
-.heart-container .svg-filled {
-  fill: var(--heart-color);
-  position: absolute;
-}
-
-.heart-container .svg-filled {
-  animation: keyframes-svg-filled 1s;
-  display: none;
-}
-
-.heart-container .svg-celebrate {
-  position: absolute;
-  animation: keyframes-svg-celebrate 0.5s;
-  animation-fill-mode: forwards;
-  display: none;
-  stroke: var(--heart-color);
-  fill: var(--heart-color);
-  stroke-width: 2px;
-}
-
-.heart-container .checkbox:checked ~ .svg-container .svg-filled {
-  display: block;
-}
-
-.heart-container .checkbox:checked ~ .svg-container .svg-celebrate {
-  display: block;
-}
-
-/* From Uiverse.io by andrew-demchenk0 */
-.rating:not(:checked) > input {
-  position: absolute;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-
-.rating:not(:checked) > label {
-  float: right;
-  cursor: pointer;
-  font-size: 30px;
-  color: #666;
-}
-
-.rating:not(:checked) > label:before {
-  content: "★";
-}
-
-.rating > input:checked + label:hover,
-.rating > input:checked + label:hover ~ label,
-.rating > input:checked ~ label:hover,
-.rating > input:checked ~ label:hover ~ label,
-.rating > label:hover ~ input:checked ~ label {
-  color: #e58e09;
-}
-
-.rating:not(:checked) > label:hover,
-.rating:not(:checked) > label:hover ~ label {
-  color: #ff9e0b;
-}
-
-.rating > input:checked ~ label {
-  color: #ffa723;
-}
-
-@keyframes keyframes-svg-filled {
-  0% {
-    transform: scale(0);
-  }
-  25% {
-    transform: scale(1.2);
-  }
-  50% {
-    transform: scale(1);
-    filter: brightness(1.5);
-  }
-}
-@keyframes keyframes-svg-celebrate {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    opacity: 1;
-    filter: brightness(1.5);
-  }
-  100% {
-    transform: scale(1.4);
-    opacity: 0;
-    display: none;
-  }
-}
 @media (min-width: 320px) {
   .page2-card {
     margin-top: 40px;
