@@ -1,5 +1,6 @@
-let cardContainers = document.querySelectorAll(".katalog-cards");
-let inputSearch = document.querySelector(".search__input");
+const cardContainers = document.querySelectorAll(".katalog-cards");
+const inputSearch = document.querySelector(".search__input");
+
 const products = [
   { id: 1, images: ["../images/katalog/img1.png"], title: "Молоко" },
   { id: 2, images: ["../images/katalog/img2.png"], title: "Сыр" },
@@ -15,34 +16,30 @@ const products = [
   { id: 12, images: ["../images/katalog/img12.png"], title: "Кофе" },
 ];
 
-function getProductCard(el) {
+function getProductCard(product) {
   return `
     <div class="food-card">
-      <img src="${el.images[0]}" alt="?" class="food-card__image">
+      <img src="${product.images[0]}" alt="${product.title}" class="food-card__image">
       <div class="food-card__overlay"></div>
-      <h2 class="food-card__title">${el.title} ${el.id}</h2>
+      <h2 class="food-card__title">${product.title}</h2>
     </div>`;
 }
 
 cardContainers.forEach((container) => {
-  container.innerHTML = products
-    .map((product) => getProductCard(product))
-    .join("");
+  container.innerHTML = products.map(getProductCard).join("");
 });
 
 inputSearch.addEventListener("keyup", (e) => {
-  let searchValue = e.target.value.toLowerCase();
+  const searchValue = e.target.value.toLowerCase();
+
   cardContainers.forEach((container) => {
-    let cards = container.querySelectorAll(".food-card");
+    const cards = container.querySelectorAll(".food-card");
+
     cards.forEach((card) => {
-      let title = card
+      const title = card
         .querySelector(".food-card__title")
         .textContent.toLowerCase();
-      if (title.includes(searchValue)) {
-        card.style.display = "block";
-      } else {
-        card.style.display = "none";
-      }
+      card.style.display = title.includes(searchValue) ? "block" : "none";
     });
   });
 });
