@@ -1620,3 +1620,244 @@ body {
     font-size: 14px;
   }
 }
+.cart-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.korzinka {
+  margin-top: 100px;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delivery-info {
+  font-size: 14px;
+  color: #666;
+}
+
+.cart-items {
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #e0e0d1;
+}
+
+.item-checkbox {
+  flex: 0 0 30px;
+}
+
+.item-image {
+  flex: 0 0 70px;
+  margin-right: 15px;
+}
+.item-image img {
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+.item-image img.grayscale {
+  filter: grayscale(100%);
+}
+
+.item-details {
+  flex: 1;
+}
+.item-details .item-name {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+}
+.item-details .item-weight {
+  font-size: 12px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.item-details .item-weight span {
+  margin-right: 10px;
+}
+.item-details .item-weight .old-price {
+  text-decoration: line-through;
+  color: #999;
+}
+.item-details .item-weight .discount {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 10px;
+}
+
+.item-quantity {
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+}
+.item-quantity .quantity-btn {
+  width: 30px;
+  height: 30px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item-quantity .quantity-btn.minus {
+  background-color: #4caf50;
+  color: white;
+}
+.item-quantity .quantity {
+  margin: 0 10px;
+  font-size: 16px;
+  min-width: 20px;
+  text-align: center;
+}
+.item-quantity .unavailable-text {
+  color: #999;
+  font-size: 12px;
+}
+
+.item-price {
+  flex: 0 0 120px;
+  text-align: right;
+}
+.item-price .price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+.item-price .price-details {
+  font-size: 12px;
+  color: #666;
+}
+.item-price .price-details .items-count {
+  margin-bottom: 2px;
+}
+.item-price .price-details .total-price {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.item-price .price-details .savings {
+  color: #999;
+}
+.item-price .price-details .savings-amount {
+  color: #ff6b6b;
+  font-weight: bold;
+}
+.item-price .unavailable-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.item-price .unavailable-actions button {
+  margin-bottom: 5px;
+  background: none;
+  border: none;
+  color: #ff6b6b;
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.item-price .unavailable-actions button.notify-btn {
+  color: #4caf50;
+}
+
+.cart-summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.summary-left .discount-toggle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.summary-left .discount-toggle .switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  margin-right: 10px;
+}
+.summary-left .discount-toggle .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.summary-left .discount-toggle .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+.summary-left .discount-toggle .switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+.summary-left .discount-toggle .switch input:checked + .slider {
+  background-color: #4caf50;
+}
+.summary-left .discount-toggle .switch input:checked + .slider:before {
+  transform: translateX(20px);
+}
+.summary-left .discount-toggle span {
+  font-size: 14px;
+  color: #333;
+}
+.summary-left .discount-info {
+  font-size: 12px;
+  color: #666;
+}
+
+.summary-right .checkout-btn {
+  background-color: #ff9966;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.summary-right .checkout-btn:hover {
+  background-color: #ff8844;
+}

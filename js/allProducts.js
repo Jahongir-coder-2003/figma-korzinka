@@ -10,11 +10,9 @@ function getProductCard(el) {
     </div>`;
 }
 
-// Har bir konteyner uchun mahsulotlar kartasini qo'shamiz
-
 function names(data = categories) {
   cardContainers.forEach((container) => {
-    container.innerHTML = ""; // Har bir konteynerni tozalaymiz
+    container.innerHTML = "";
     data.forEach((el) => {
       container.innerHTML += getProductCard(el);
     });
