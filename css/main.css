@@ -106,6 +106,11 @@ header nav .nav-profile .nav-icons .nav-icon p {
   font-weight: 400;
   font-size: 12px;
 }
+header nav .nav-profile .nav-icons .nav-icon button {
+  width: 30px;
+  background-color: white;
+  border: none;
+}
 
 @media (min-width: 320px) {
   .nav-input input {

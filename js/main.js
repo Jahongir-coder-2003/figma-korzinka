@@ -1,7 +1,7 @@
 let pageCards = document.querySelector(".page2-cards");
 let pageCards3 = document.querySelector(".page3-cards");
 let pageCards4 = document.querySelector(".page4-cards");
-
+let favoriteCount = document.querySelector(".favorite");
 function getCards(el) {
   let card = document.createElement("div");
   card.className = "page2-card";
