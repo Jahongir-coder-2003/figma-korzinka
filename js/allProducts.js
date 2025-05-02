@@ -49,17 +49,37 @@ cardContainers.forEach((container) => {
   container.innerHTML = products.map(getProductCard).join("");
 });
 
-// inputSearch.addEventListener("keyup", (e) => {
-//   const searchValue = e.target.value.toLowerCase();
+// // inputSearch.addEventListener("keyup", (e) => {
+// //   const searchValue = e.target.value.toLowerCase();
 
-//   cardContainers.forEach((container) => {
-//     const cards = container.querySelectorAll(".food-card");
+// //   cardContainers.forEach((container) => {
+// //     const cards = container.querySelectorAll(".food-card");
 
-//     cards.forEach((card) => {
-//       const title = card
-//         .querySelector(".food-card__title")
-//         .textContent.toLowerCase();
-//       card.style.display = title.includes(searchValue) ? "block" : "none";
-//     });
-//   });
-// });
+// //     cards.forEach((card) => {
+// //       const title = card
+// //         .querySelector(".food-card__title")
+// //         .textContent.toLowerCase();
+// //       card.style.display = title.includes(searchValue) ? "block" : "none";
+// //     });
+// //   });
+// // });
+
+// function cardAllProdact(el) {
+//   return `
+//    <div class="page2-card">
+//     <div class="page2-card-img"><img src="../assets/images/products/33.png" alt="CARD IMG NO?"></div>
+//     <div class="page2-card-title">
+//       <h3>82 ₽</h3>
+//       <h4>50,50 ₽</h4>
+//     </div>
+//     <div class="page2-card-info">
+//       <p>С картой</p>
+//       <p>Обычная</p>
+//     </div>
+//     <h5>Salmon is a type of fish that is often grilled or baked and served as a main course.</h5><a
+//       href="./pages/tovar.html"><button>В КОРЗИНУ</button></a>
+//   </div>
+//   `;
+// }
+// let allCard = document.querySelector(".all-card");
+// products.map((el) => allCard.append(getCards(el)));
