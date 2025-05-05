@@ -14,6 +14,7 @@ function getCards(el) {
   cardImgimg.alt = "CARD IMG NO?";
 
   cardImg.append(cardImgimg);
+
   let cardTitle = document.createElement("div");
   cardTitle.className = "page2-card-title";
   card.append(cardTitle);
