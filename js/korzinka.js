@@ -48,20 +48,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Dynamic Cart Items
   const cartItems = [
-    { name: "Комбайн КСК-1218", weight: "13.5 кг", price: "89.00 ₽" },
-    {
-      name: "Комбайн КСК-1218 со скидкой",
-      weight: "13.5 кг",
-      price: "80.10 ₽",
-    },
-    { name: "Комбайн КСК-1218", weight: "13.5 кг", price: "85.00 ₽" },
+    { name: "Комбайн КСК-1218", weight: "13.5 кг", price: "89.00" },
+    { name: "Комбайн КСК-1218 со скидкой", weight: "13.5 кг", price: "80.10" },
+    { name: "Комбайн КСК-1218", weight: "13.5 кг", price: "85.00" },
   ];
 
   const cartContainer = document.getElementById("cart-items");
 
   cartItems.forEach((item) => {
+    const quantity = 1;
+    const totalPrice = (parseFloat(item.price) * quantity).toFixed(2);
+
     const div = document.createElement("div");
     div.className = "cart-item";
+    div.setAttribute("data-price", item.price); // Save unit price
+
     div.innerHTML = `
       <div class="item-image">
         <img src="../images/korzinka/korzinka-img.png" alt="Комбайн">
@@ -72,17 +73,17 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
       <div class="item-quantity">
         <button class="quantity-btn minus">-</button>
-        <span class="quantity">1</span>
+        <span class="quantity">${quantity}</span>
         <button class="quantity-btn plus">+</button>
       </div>
       <div class="item-price">
-        <div class="price">${item.price}</div>
+        <div class="price">${totalPrice} ₽</div>
       </div>
     `;
     cartContainer.appendChild(div);
   });
 
-  // Quantity +/- with delete if < 1
+  // Quantity +/- and price update
   document.querySelectorAll(".cart-item").forEach((item) => {
     const minus = item.querySelector(".minus");
     const plus = item.querySelector(".plus");
@@ -91,15 +92,25 @@ document.addEventListener("DOMContentLoaded", () => {
     minus.addEventListener("click", () => {
       let qty = parseInt(qtySpan.textContent);
       if (qty > 1) {
-        qtySpan.textContent = qty - 1;
+        qty--;
+        qtySpan.textContent = qty;
+        updatePrice(item, qty);
       } else {
-        item.remove(); // Quantity 1 bo‘lsa va yana bosilsa — o‘chirish
+        item.remove();
       }
     });
 
     plus.addEventListener("click", () => {
       let qty = parseInt(qtySpan.textContent);
-      qtySpan.textContent = qty + 1;
+      qty++;
+      qtySpan.textContent = qty;
+      updatePrice(item, qty);
     });
   });
+
+  function updatePrice(item, quantity) {
+    const unitPrice = parseFloat(item.getAttribute("data-price"));
+    const total = (unitPrice * quantity).toFixed(2);
+    item.querySelector(".price").textContent = `${total} ₽`;
+  }
 });

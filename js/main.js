@@ -45,7 +45,7 @@ function getCards(el) {
   card.append(cardh5);
 
   let cardBtn = document.createElement("a");
-  cardBtn.href = "./pages/tovar.html";
+  cardBtn.href = "../pages/korzinka.html";
   cardBtn.innerHTML = "<button>В КОРЗИНУ</button>";
   card.append(cardBtn);
   pageCards.append(card);
