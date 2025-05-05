@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
 
-
   // Cart section
   const section = document.createElement("section");
   section.classList.add("korzinka");
@@ -47,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
   `;
   body.appendChild(section);
 
-
   // Dynamic Cart Items
   const cartItems = [
     { name: "Комбайн КСК-1218", weight: "13.5 кг", price: "89.00 ₽" },
@@ -84,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cartContainer.appendChild(div);
   });
 
-  // Quantity +/-
+  // Quantity +/- with delete if < 1
   document.querySelectorAll(".cart-item").forEach((item) => {
     const minus = item.querySelector(".minus");
     const plus = item.querySelector(".plus");
@@ -92,7 +90,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     minus.addEventListener("click", () => {
       let qty = parseInt(qtySpan.textContent);
-      if (qty > 1) qtySpan.textContent = qty - 1;
+      if (qty > 1) {
+        qtySpan.textContent = qty - 1;
+      } else {
+        item.remove(); // Quantity 1 bo‘lsa va yana bosilsa — o‘chirish
+      }
     });
 
     plus.addEventListener("click", () => {
